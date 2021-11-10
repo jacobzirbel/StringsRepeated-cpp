@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0385CBE3272CC8B300EACFA9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0385CBE2272CC8B300EACFA9 /* main.cpp */; };
+		036762C6272E47F100D49EF8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 036762C5272E47F100D49EF8 /* main.cpp */; };
+		0374F85A272F2FE9006C9F8D /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0374F857272F2FE9006C9F8D /* LinkedList.cpp */; };
+		0374F85B272F2FE9006C9F8D /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0374F858272F2FE9006C9F8D /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		036762C5272E47F100D49EF8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0374F857272F2FE9006C9F8D /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		0374F858272F2FE9006C9F8D /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		0374F859272F2FE9006C9F8D /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		0385CBDF272CC8B300EACFA9 /* StringsRepeated-xc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "StringsRepeated-xc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0385CBE2272CC8B300EACFA9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		03F64C7427332A5A00662EE1 /* txts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = txts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,11 @@
 		0385CBE1272CC8B300EACFA9 /* StringsRepeated-xc */ = {
 			isa = PBXGroup;
 			children = (
-				0385CBE2272CC8B300EACFA9 /* main.cpp */,
+				03F64C7427332A5A00662EE1 /* txts */,
+				0374F859272F2FE9006C9F8D /* include */,
+				0374F857272F2FE9006C9F8D /* LinkedList.cpp */,
+				0374F858272F2FE9006C9F8D /* Node.cpp */,
+				036762C5272E47F100D49EF8 /* main.cpp */,
 			);
 			path = "StringsRepeated-xc";
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0385CBE3272CC8B300EACFA9 /* main.cpp in Sources */,
+				0374F85B272F2FE9006C9F8D /* Node.cpp in Sources */,
+				0374F85A272F2FE9006C9F8D /* LinkedList.cpp in Sources */,
+				036762C6272E47F100D49EF8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
