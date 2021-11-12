@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03110514273DE504006C0E2B /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03110513273DE504006C0E2B /* Program.cpp */; };
 		036762C6272E47F100D49EF8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 036762C5272E47F100D49EF8 /* main.cpp */; };
 		0374F85A272F2FE9006C9F8D /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0374F857272F2FE9006C9F8D /* LinkedList.cpp */; };
 		0374F85B272F2FE9006C9F8D /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0374F858272F2FE9006C9F8D /* Node.cpp */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03110513273DE504006C0E2B /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
 		036762C5272E47F100D49EF8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0374F857272F2FE9006C9F8D /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		0374F858272F2FE9006C9F8D /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				0374F857272F2FE9006C9F8D /* LinkedList.cpp */,
 				0374F858272F2FE9006C9F8D /* Node.cpp */,
 				036762C5272E47F100D49EF8 /* main.cpp */,
+				03110513273DE504006C0E2B /* Program.cpp */,
 			);
 			path = "StringsRepeated-xc";
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03110514273DE504006C0E2B /* Program.cpp in Sources */,
 				0374F85B272F2FE9006C9F8D /* Node.cpp in Sources */,
 				0374F85A272F2FE9006C9F8D /* LinkedList.cpp in Sources */,
 				036762C6272E47F100D49EF8 /* main.cpp in Sources */,
