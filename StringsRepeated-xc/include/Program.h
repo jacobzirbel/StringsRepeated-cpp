@@ -7,7 +7,7 @@ class Program
 {
 public:
     Program(std::string fileName, std::map<std::string, int> finalData);
-    std::map<std::string, int>& FinalData;
+    std::map<std::string, int> FinalData;
     void WriteFile();
     
 private:

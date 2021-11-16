@@ -13,7 +13,8 @@ using namespace std;
 
 int main()
 {
-    auto finalData = std::map<string, int>();
-    auto program = Program("txts/bible.txt", finalData);
+    // g++ -sdt=c++20 *.cpp -o output && ./output
+    std::map<string,int> finalData = std::map<string, int>();
+    Program program = Program("txts/bible.txt", finalData);
     return 0;
 };

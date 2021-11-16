@@ -28,13 +28,3 @@ void LinkedList::Add(std::string value, int n)
     Latest->Next = tempPtr;
     Latest = tempPtr;
 }
-
-void LinkedList::ForEach(std::function<void(std::string, int)> fn)
-{
-    Node* current = First->Next;
-    while (current != nullptr)
-    {
-        fn(current->Value, current->N);
-        current = current->Next;
-    }
-}

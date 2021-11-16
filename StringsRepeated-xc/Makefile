@@ -160,6 +160,21 @@ Node.s:
 .PHONY : Node.s
 
 # target to build an object file
+Program.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Program.o
+.PHONY : Program.o
+
+# target to preprocess a source file
+Program.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Program.i
+.PHONY : Program.i
+
+# target to generate assembly for a file
+Program.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Program.s
+.PHONY : Program.s
+
+# target to build an object file
 main.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
 .PHONY : main.o
@@ -189,6 +204,9 @@ help:
 	@echo "... Node.o"
 	@echo "... Node.i"
 	@echo "... Node.s"
+	@echo "... Program.o"
+	@echo "... Program.i"
+	@echo "... Program.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

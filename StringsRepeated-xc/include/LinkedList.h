@@ -10,5 +10,4 @@ public:
     Node* First;
     Node* Latest;
     void Add(std::string value, int n);
-    void ForEach(std::function<void(std::string, int)>);
 };

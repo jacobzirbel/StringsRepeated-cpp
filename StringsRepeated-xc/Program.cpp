@@ -17,11 +17,17 @@ using namespace std;
 
 Program::Program(string fileName, std::map<string, int> finalData) : FileName(fileName), FinalData(finalData)
 {
+    string file = getFile();
+    auto startGet = high_resolution_clock::now();
 
-    auto file = getFile();
     makeList(file);
     getLeads();
     byLeads();
+
+    auto endGet = high_resolution_clock::now();
+    auto durationGet = duration_cast<milliseconds>(endGet - startGet);
+    cout << durationGet.count() << endl;
+
     WriteFile();
 }
 
@@ -47,23 +53,22 @@ void Program::byLeads()
         n++;
         again = false;
         vector<int> nextLeads = vector<int>();
-        auto size = leads.size();
         Node* currentNode = inputList->First;
         auto data = std::map<string, int>();
-        for(int index = 0; index < size; index++)
+        for(auto & i : leads)
         {
-            int i = leads[index];
             currentNode = currentNode->Get(i);
             string str = currentNode->MakePhrase(n);
             if(str != "")
             {
-                if(data.count(str) == 0)
+                auto f = data.find(str);
+                if(f == data.end())
                 {
                     data[str] = (i + 1) * -1;
                 }
                 else
                 {
-                    auto s = data[str];
+                    auto s = f->second;
                     if(s < 0)
                     {
                         nextLeads.push_back(s * -1 - 1);
@@ -80,17 +85,13 @@ void Program::byLeads()
             }
         };
         
-        auto startGet = high_resolution_clock::now();
         for ( const auto &keyValue : data ) {
             if(keyValue.second > 1)
             {
                 FinalData[keyValue.first] = keyValue.second;
             }
         }
-        auto endGet = high_resolution_clock::now();
-        auto durationGet = duration_cast<milliseconds>(endGet - startGet);
-        cout << durationGet.count() << endl;
-
+    
         leads = nextLeads;
         sort(leads.begin(), leads.end());
     }
@@ -99,30 +100,31 @@ void Program::byLeads()
 void Program::getLeads()
 {
     leads = vector<int>();
-    auto data = std::map<string, int>();
-    int size = inputList->Latest->N + 1;
+    std::map<string, int> data = std::map<string, int>();
+    auto size = inputList->Latest->N + 1;
     Node* node = inputList->First->Next;
-    for(int i = 0; i < size; i++)
+    for(auto i = 0; i < size; i++)
     {
         string val = node->Value;
         node = node->Next;
         string str = val + " ";
-        if(data.count(str) == 0)
+        auto f = data.find(str);
+        if(f == data.end())
         {
-            (data)[str] = -1 * (i + 1);
+            data[str] = -1 * (i + 1);
         }
         else
         {
-            if((data)[str] < 0)
+            if(f->second < 0)
             {
-                leads.push_back(data[str] * -1 - 1);
+                leads.push_back(f->second * -1 - 1);
                 leads.push_back(i);
-                (data)[str] = 2;
+                data[str] = 2;
             }
             else
             {
                 leads.push_back(i);
-                (data)[str]++;
+                data[str]++;
             }
         };
     };
@@ -179,10 +181,10 @@ string Program::getFile()
 void Program::makeList(const string &input)
 {
     inputList = new LinkedList();
-    long size = input.size();
+    auto size = input.size();
     string str = "";
     int n = 0;
-    for (string::size_type i = 0; i < size; i++)
+    for (auto i = 0; i < size; i++)
     {
         char c = input[i];
         if (c == ' ')
